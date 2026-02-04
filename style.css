@@ -1,0 +1,135 @@
+* {
+    box-sizing: border-box;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+body {
+    margin: 0;
+    padding: 12px;
+    min-width: 320px;
+    background: linear-gradient(135deg, #050802, #839e21);
+    color: white;
+    font-weight: 600;
+    text-align: center;
+}
+
+#input-el {
+    width: 100%;
+    padding: 12px 14px;
+    font-size: 15px;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    background: #cec180;
+    color: #000000;
+    margin-bottom: 8px;
+    transition: box-shadow 0.15s ease, transform 0.15s ease;
+}
+
+#input-el::placeholder {
+    color: #365314;
+}
+
+#input-el:focus {
+    transform: scale(1.01);
+    box-shadow: 0 0 0 2px rgba(190, 255, 140, 0.6);
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 10px;
+}
+
+li {
+    background: rgba(0, 0, 0, 0.25);
+    padding: 8px 10px;
+    border-radius: 8px;
+    margin-bottom: 6px;
+    font-size: 13px;
+    word-break: break-word;
+    animation: fadeInUp 0.25s ease;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+    font-style: italic;
+    font-size: 12px;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(6px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.button-container {
+    display: flex;
+    gap: 8px;
+    width: 100%;
+    max-width: 480px;
+    margin: 0 auto 10px;
+}
+
+#input-btn,
+#delete-btn,
+#tab-btn {
+    flex: 1;
+    padding: 12px;
+    font-size: 14px;
+    font-weight: 700;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.12s ease, box-shadow 0.12s ease, filter 0.12s ease;
+}
+
+/* Themes for each button */
+#input-btn {
+    background: linear-gradient(135deg, #8bbb9d, #8edaaa);
+    color: white;
+}
+
+#delete-btn {
+    background: linear-gradient(135deg, #891f1f, #3b2828);
+    color: white;
+}
+
+#tab-btn {
+    background: linear-gradient(135deg, #e7dfbc, #b27314);
+    color: #222;
+}
+
+/* Hover and active animations for all buttons */
+#input-btn:hover,
+#delete-btn:hover,
+#tab-btn:hover {
+    transform: translateY(-2px) scale(1.02);
+    filter: brightness(1.05);
+}
+
+#input-btn:active,
+#delete-btn:active,
+#tab-btn:active {
+    transform: translateY(0) scale(0.98);
+    box-shadow: none;
+}
+
+/* Extra hover effect for Delete button */
+#delete-btn:hover {
+    animation: shake 0.25s ease-in-out;
+}
+
+@keyframes shake {
+    0% { transform: translateX(0); }
+    25% { transform: translateX(-2px); }
+    50% { transform: translateX(2px); }
+    75% { transform: translateX(-2px); }
+    100% { transform: translateX(0); }
+}
