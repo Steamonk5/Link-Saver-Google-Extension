@@ -1,7 +1,8 @@
 # Link Saver – Chrome Extension
 
-Save and access links instantly — save your current tab or any URL with one click.
 <img width="397" height="566" alt="link saver extension" src="https://github.com/user-attachments/assets/25dbb78f-c6bf-4255-bc8a-ce502452fad3" />
+
+Save and access links instantly — save your current tab or any URL with one click.
 
 Save and access links instantly.
 
